@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/location_list_item"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/address"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/lanLog"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/delete_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/circle_bg"
+        android:contentDescription="Delete location"
+        android:src="@drawable/ic_delete"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        tools:ignore="HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
+
+</RelativeLayout>

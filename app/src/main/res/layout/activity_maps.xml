@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity"
+        tools:ignore="FragmentTagUsage" />
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_radius_bg"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:contentDescription="Search"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Search..."
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/microphone_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_microphone"
+            android:contentDescription="Microphone"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/save_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/circle_bg"
+            android:contentDescription="Save the location"
+            android:src="@drawable/ic_save"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/favorite_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_bg"
+            android:contentDescription="Favorite locations"
+            android:src="@drawable/ic_list"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controller_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_radius_bg"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/zoom_in_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Zoom In"
+            android:src="@drawable/ic_zoom_in"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+
+        <ImageButton
+            android:id="@+id/current_location_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Current Location"
+            android:src="@drawable/ic_location"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/zoom_out_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Zoom Out"
+            android:src="@drawable/ic_zoom_out"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_stop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:text="Start"
+        android:textAllCaps="false"
+        app:iconPadding="4dp"
+        app:iconSize="30dp"
+        app:icon="@drawable/ic_play"
+        app:iconTint="@android:color/holo_green_dark"
+        app:cornerRadius="10dp"
+        android:paddingRight="25dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+</RelativeLayout>
